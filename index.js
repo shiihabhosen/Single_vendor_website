@@ -13,9 +13,10 @@ app.use(cors())
 mongodbConnection()
 
 // routes
-app.get('/vendor',()=>{
-    console.log('everyting is okay! ')
-})
+app.get('/', (req, res) => {
+    res.send('Render working');
+});
+
 // server create
 const port = process.env.PORT || 5000
 app.listen(port,()=>{
